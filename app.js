@@ -64,5 +64,18 @@ switch (impresion){
 console.log("el precio actualizado FINAL es:"+ precioBase)  
 alert("El precio final es de $"+ precioBase + " " + "Muchas gracias por cotizar con nosotros!")
 
+const servicios = ["Impresion de Agendas", "Encuadernación de Libros", "Posters", "Merchandising", "Envíos"]
 
+for(let i in servicios){
+document.getElementById("servicios").innerHTML += "<li>"+servicios[i]+"</li>"
+}
+
+
+//creo parrafo
+let parrafo = document.createElement("p");
+let nodo = document.createTextNode("Gracias por Cotizar con nosotros");
+parrafo.appendChild(nodo);
+
+let elemento = document.getElementById("gracias")
+elemento.appendChild(parrafo)
 
