@@ -64,10 +64,10 @@ switch (impresion){
 console.log("el precio actualizado FINAL es:"+ precioBase)  
 alert("El precio final es de $"+ precioBase + " " + "Muchas gracias por cotizar con nosotros!")
 
-const servicios = ["Impresion de Agendas", "Encuadernación de Libros", "Posters", "Merchandising", "Envíos"]
+const otrosservicios = ["Impresion de Agendas", "Encuadernación de Libros", "Posters", "Merchandising", "Envíos"]
 
-for(let i in servicios){
-document.getElementById("servicios").innerHTML += "<li>"+servicios[i]+"</li>"
+for(let i in otrosservicios){
+document.getElementById("servicios").innerHTML += "<li>"+otrosservicios[i]+"</li>"
 }
 
 
