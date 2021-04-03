@@ -1,25 +1,15 @@
+//CREO ENCABEZADO 
 
-//INTENCIÓN DE CARGAR LOS SERVICIOS A TRAVES DE EL ARCHIVO JSON - SIN  EXITO
+let titulo = document.getElementById("titulo");
+titulo.innerText= "COTIZADOR DE GRÁFICA (SIMULADOR)"
 
-const grillaDeServicios = document.getElementById("tablaServicios")
-let carrito = []
-let servicio = ""
-const cargaServicios = () => {
-    for (let servicio of SERVICIOS) {
-        let fila = `<tr>
-        <td>
-            ${servicio.nombre}
-        </td>
-        <td><button>+</button></td>
-    </tr>`
-grillaDeServicios.innerHTML += fila
+//CARGA DE SERVICIOS A TRAVES DE ARCHIVO JSON
+
+function agregoServicios (){
+    for (let i=0; i<SERVICIOS.length; i++ ){
+        document.getElementById("otrosservicios").innerHTML += "<li>"+SERVICIOS[i].nombre+"</li>"
     }
+
 }
+agregoServicios();
 
-// CREO INPUT DE CANTIDAD DE PAGINAS
-
-let paginas = document.getElementById("paginas")
-
-let inputpaginas = document.createElement("INPUT");
-inputpaginas.setAttribute("type", "number");
-inputpaginas.appendChild(paginas)
