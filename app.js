@@ -72,4 +72,14 @@ function cotizar() {
     console.log("el precio actualizado FINAL es:" + precioBase)
     alert("El precio final es de $" + precioBase + " " + "Muchas gracias por cotizar con nosotros!")
     localStorage.setItem('precio total',precioBase)
+
+//crear resultados en html con dom bajando datos de local storage
+
+let resultadofinal = localStorage.getItem('precio total')
+console.log("Se descargó la información correctamente, siendo:$"+ parseFloat(resultadofinal))
+
+let textoresultado = document.createElement("h3")
+textoresultado.innerHTML = "El resultado de la cotización es $"+resultadofinal
+document.body.appendChild(textoresultado);
 }
+
