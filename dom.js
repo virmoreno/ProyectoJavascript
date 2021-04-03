@@ -12,7 +12,7 @@ function agregoServicios (){
 }
 agregoServicios();
 
-//TABLA COTIZAR
+//MOSTRAR TABLA COTIZAR CON CLICK BOTON
 function mostrarTabla(){
     let displayTabla = document.getElementById("tablaservicios")
     if(displayTabla.style.display=="none"){
@@ -23,3 +23,4 @@ function mostrarTabla(){
     }
     }
 
+//COTIZAR

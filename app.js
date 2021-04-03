@@ -1,10 +1,13 @@
 
+function cotizar(){
+
 let paginas = parseFloat( prompt ("Cuántas páginas tiene tu documento?"))
 console.log("la cantidad de páginas es:"+paginas)
 let precioBase = paginas * 0.75;
 console.log("el precio base es:"+ precioBase)
-let texto = prompt ("El texto tiene imágenes? SI/NO (en mayúsculas)")
-switch (texto){
+let texto = prompt ("El texto tiene imágenes? SI/NO")
+let texto1= texto.toUpperCase()
+switch (texto1){
     case "SI":
         precioBase=precioBase*4
         break;
@@ -17,8 +20,9 @@ switch (texto){
 }
 console.log("el precio actualizado 1 es:"+ precioBase)  
 
-let color = prompt ("Querés impresión en blanco y negro o en color? escribir BN o C (en mayúsculas)")
-switch (color){
+let color = prompt("Querés impresión en blanco y negro o en color? escribir BN o C")
+let color1= color.toUpperCase()
+switch (color1){
     case "BN":
         
         break;
@@ -32,8 +36,9 @@ switch (color){
 }
 console.log("el precio actualizado 2 es:"+ precioBase)  
 
-let encuadernacion = prompt ("Lo encuadernas? A para Anillado, B para binder, NO para nada (en mayúsculas)")
-switch (encuadernacion){
+let encuadernacion = prompt("Lo encuadernas? A para Anillado, B para binder, NO para nada")
+let encuadernacion1= encuadernacion.toUpperCase()
+switch (encuadernacion1){
     case "A":
         precioBase=precioBase+100
         break;
@@ -49,8 +54,9 @@ switch (encuadernacion){
 }
 console.log("el precio actualizado 3 es:"+ precioBase)  
 
-let impresion = prompt("Finalmente, deseas impresión doble faz o simple faz? DF para doble faz, SF para simple faz (en mayúsculas)")
-switch (impresion){
+let impresion = prompt("Finalmente, deseas impresión doble faz o simple faz? DF para doble faz, SF para simple faz")
+let impresion1= impresion.toUpperCase()
+switch (impresion1){
     case "DF":
         precioBase=precioBase*0.66
         break;
@@ -63,19 +69,4 @@ switch (impresion){
 }
 console.log("el precio actualizado FINAL es:"+ precioBase)  
 alert("El precio final es de $"+ precioBase + " " + "Muchas gracias por cotizar con nosotros!")
-
-const otrosservicios = ["Impresion de Agendas", "Encuadernación de Libros", "Posters", "Merchandising", "Envíos"]
-
-for(let i in otrosservicios){
-document.getElementById("servicios").innerHTML += "<li>"+otrosservicios[i]+"</li>"
 }
-
-
-//creo parrafo
-let parrafo = document.createElement("p");
-let nodo = document.createTextNode("Gracias por Cotizar con nosotros");
-parrafo.appendChild(nodo);
-
-let elemento = document.getElementById("gracias")
-elemento.appendChild(parrafo)
-
