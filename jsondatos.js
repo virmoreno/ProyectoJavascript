@@ -1,5 +1,4 @@
-const SERVICIOS = [
-    {
+const SERVICIOS = [{
         "servicioid": 1,
         "nombre": "Impresion de texto simple",
     },
