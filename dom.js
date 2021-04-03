@@ -9,7 +9,17 @@ function agregoServicios (){
     for (let i=0; i<SERVICIOS.length; i++ ){
         document.getElementById("otrosservicios").innerHTML += "<li>"+SERVICIOS[i].nombre+"</li>"
     }
-
 }
 agregoServicios();
+
+//TABLA COTIZAR
+function mostrarTabla(){
+    let displayTabla = document.getElementById("tablaservicios")
+    if(displayTabla.style.display=="none"){
+        displayTabla.style.display="block";
+    }
+    else{
+        displayTabla.style.display="none";
+    }
+    }
 
