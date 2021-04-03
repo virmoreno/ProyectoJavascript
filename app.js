@@ -71,4 +71,5 @@ function cotizar() {
     }
     console.log("el precio actualizado FINAL es:" + precioBase)
     alert("El precio final es de $" + precioBase + " " + "Muchas gracias por cotizar con nosotros!")
+    localStorage.setItem('precio total',precioBase)
 }
