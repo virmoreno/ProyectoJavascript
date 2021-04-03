@@ -1,6 +1,8 @@
+//COTIZAR
+let btncotizar = document.getElementById("btnCotizar")
+btncotizar.addEventListener("click", cotizar);
 
 function cotizar(){
-
 let paginas = parseFloat( prompt ("Cuántas páginas tiene tu documento?"))
 console.log("la cantidad de páginas es:"+paginas)
 let precioBase = paginas * 0.75;
