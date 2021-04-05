@@ -16,7 +16,7 @@ agregoServicios();
 
 document.getElementById("btnUlt").addEventListener("click", ultimaCot);
 
-function ultimaCot(){
+function ultimaCot() {
     let resultadoFinal = localStorage.getItem("preciofinal")
-    document.getElementById("ult").innerHTML = "La última cotización fue de $"+resultadoFinal
+    document.getElementById("ult").innerHTML = "La última cotización fue de $" + resultadoFinal
 }

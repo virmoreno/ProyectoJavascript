@@ -1,4 +1,3 @@
-
 function calculo() {
     var paginas = document.getElementById('paginas').value
     console.log("la cantidad de páginas es:" + paginas)
@@ -17,30 +16,30 @@ function calculo() {
     }
     if (txtCI.checked == true) {
         precioBase = precioBase * 4
-        console.log("text ci true"+" "+"nuevo precio"+ " " + precioBase)
+        console.log("text ci true" + " " + "nuevo precio" + " " + precioBase)
     }
     if (encB.checked == true) {
         precioBase = precioBase + 200
-        console.log("encB true"+" "+"nuevo precio"+ " " + precioBase);
+        console.log("encB true" + " " + "nuevo precio" + " " + precioBase);
     }
     if (encA.checked == true) {
         precioBase = precioBase + 100
-        console.log("encA true"+" "+"nuevo precio"+ " " + precioBase);
+        console.log("encA true" + " " + "nuevo precio" + " " + precioBase);
     }
     if (encNO.checked == true) {
         console.log("encNO true");
     }
     if (impDF.checked == true) {
         precioBase = precioBase * 0.66
-        console.log("impDF true"+" "+"nuevo precio"+ " " + precioBase);
+        console.log("impDF true" + " " + "nuevo precio" + " " + precioBase);
     }
     if (impSF.checked == true) {
         console.log("impSF true");
-           }
+    }
 
-console.log("el precio final es"+" "+ precioBase)
-localStorage.setItem("preciofinal",precioBase)
-document.getElementById("result").innerHTML += "el precio final es $"+" "+ parseFloat(precioBase)
+    console.log("el precio final es" + " " + precioBase)
+    localStorage.setItem("preciofinal", precioBase)
+    document.getElementById("result").innerHTML += "el precio final es $" + " " + parseFloat(precioBase)
 }
 
 
@@ -62,6 +61,6 @@ function getInputValue() {
         }
     }
     calculo()
-   
- 
+
+
 }
