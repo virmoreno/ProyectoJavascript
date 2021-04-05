@@ -40,7 +40,7 @@ function calculo() {
 
 console.log("el precio final es"+" "+ precioBase)
 localStorage.setItem("preciofinal",precioBase)
-document.getElementById("result").innerHTML += "el precio final es"+" "+ parseFloat(precioBase)
+document.getElementById("result").innerHTML += "el precio final es $"+" "+ parseFloat(precioBase)
 }
 
 
