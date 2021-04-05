@@ -1,4 +1,3 @@
-var pagTot = document.getElementById('paginas')
 
 function calculo() {
     var paginas = document.getElementById('paginas').value

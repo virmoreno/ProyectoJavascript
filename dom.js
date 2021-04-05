@@ -12,5 +12,11 @@ function agregoServicios() {
 }
 agregoServicios();
 
+//MUESTRO RESULTADOS DE SESIÓN ANTERIOR BAJADO DE LOCALSTORAGE
 
+document.getElementById("btnUlt").addEventListener("click", ultimaCot);
 
+function ultimaCot(){
+    let resultadoFinal = localStorage.getItem("preciofinal")
+    document.getElementById("ult").innerHTML = "La última cotización fue de $"+resultadoFinal
+}
