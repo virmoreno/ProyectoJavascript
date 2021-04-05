@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotizador de Gráfica</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script defer src="jsondatos.js"></script>
     <script defer src="dom.js"></script>
-    <script defer src="app.js"></script>
+    <script defer src="functions.js"></script>
 
 </head>
 
@@ -22,61 +22,55 @@
     <main>
         <h2>Nuestros Servicios</h2>
         <ul id="otrosservicios"></ul>
-        <br>
-        <button id="btnCotizar">Cotizar</button>
-        <br>
-        <table id="tablaservicios" hidden>
-            <tr>
-                <th>Características</th>
-                <th>Agregar</th>
-            </tr>
-            <tr>
-                <td>
-                    Cantidad de páginas
-                </td>
-                <td>
-                    <input id="paginas" type="number"> </input>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Texto simple
-                </td>
-                <td><button>+</button></td>
-            </tr>
-            <tr>
-                <td>
-                    Texto con Imágenes
-                </td>
-                <td><button>+</button></td>
-            </tr>
-            <tr>
-                <td>
-                    Encuadernación Binder
-                </td>
-                <td><button>+</button></td>
-            </tr>
-            <tr>
-                <td>
-                    Encuadernacion Anillada
-                </td>
-                <td><button>+</button></td>
-            </tr>
-            <tr>
-                <td>
-                    Impresion Doble Faz
-                </td>
-                <td><button>+</button></td>
-            </tr>
-            <tr>
-                <td>
-                    Impresion Simple Faz
-                </td>
-                <td><button>+</button></td>
-            </tr>
-        </table>
-        <ul id="otrosservicios">
-        </ul>
+
+<div class="mb-3">
+    <label for="" class="form-label">Ingrese total de páginas a cotizar</label>
+    <input type="number" class="form-control" id="paginas" placeholder="">
+  </div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="texto" id="textS" value="Texto Simple" >
+    <label class="form-check-label" for="">
+     Texto Simple
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="texto" id="textCI" value="Texto con img">
+    <label class="form-check-label" for="">
+     Texto con imágenes
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="encuadernacion" id="encB" value="Encuadernación binder" >
+    <label class="form-check-label" for="">
+     Encuadernación Binder
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="encuadernacion" id="encA" value="Encuadernación anillada">
+    <label class="form-check-label" for="">
+     Encuadernación Anillada
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="encuadernacion" id="encNO" value="Sin Encuadernacíon">
+    <label class="form-check-label" for="">
+     Sin Encuadernación 
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="impresion" id="impDF" value="Impresión doble faz" >
+    <label class="form-check-label" for="">
+     Impresión Doble Faz
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="impresion" id="impSF" value="Impresion simple faz">
+    <label class="form-check-label" for="">
+     Impresión Simple Faz
+    </label>
+  </div>
+  <button type="button" class="btn btn-dark" onclick="getInputValue()">Cotizar</button>
+  <div id="result"></div>
     </main>
 </body>
 
